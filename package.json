@@ -19,8 +19,8 @@
     "finance"
   ],
   "scripts": {
-    "start": "concurrently -k \"cd api && npm start\" \"cd client && npm start\" \"cd ledger && npm start\" \"cd webserver && npm start\"",
-    "postinstall": "concurrently -k \"cd api && npm install\" \"cd client && npm install\" \"cd ledger && npm install\" \"cd webserver && npm install\"",
+    "start": "concurrently -k \"cd api && yarn start\" \"cd client && yarn start\" \"cd ledger && yarn start\" \"cd webserver && yarn start\"",
+    "postinstall": "concurrently -k \"cd api && yarn\" \"cd client && yarn\" \"cd ledger && yarn\" \"cd webserver && yarn\"",
     "configure": "./node_modules/ilp-kit-cli/bin/configure.js"
   },
   "dependencies": {
