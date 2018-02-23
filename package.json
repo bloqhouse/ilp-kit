@@ -19,8 +19,8 @@
     "finance"
   ],
   "scripts": {
-    "start": "./start-all.sh",
-    "postinstall": "sh ./install-all.sh",
+    "start": "concurrently -k \"cd api && npm start\" \"cd client && npm start\" \"cd ledger && npm start\" \"cd webserver && npm start\"",
+    "postinstall": "concurrently -k \"cd api && npm install\" \"cd client && npm install\" \"cd ledger && npm install\" \"cd webserver && npm install\"",
     "configure": "./node_modules/ilp-kit-cli/bin/configure.js"
   },
   "dependencies": {
@@ -28,6 +28,7 @@
     "ilp-kit-cli": "^11.4.1"
   },
   "devDependencies": {
+    "concurrently": "^3.5.1",
     "five-bells-integration-test-loader": "^1.3.0"
   },
   "config": {
