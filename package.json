@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "start": "concurrently -k \"cd api && yarn start\" \"cd client && yarn start\" \"cd ledger && yarn start\" \"cd webserver && yarn start\"",
-    "postinstall": "concurrently -k \"cd api && yarn\" \"cd client && yarn\" \"cd ledger && yarn\" \"cd webserver && yarn\"",
+    "postinstall": "concurrently \"cd api && yarn\" \"cd client && yarn\" \"cd ledger && yarn\" \"cd webserver && yarn\"",
     "configure": "./node_modules/ilp-kit-cli/bin/configure.js"
   },
   "dependencies": {
