@@ -5,11 +5,11 @@ RUN apt-get update && apt-get install -y python postgresql libpq-dev build-essen
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 
-# RUN npm install # NOT NEEDED
-RUN cd api && yarn
-RUN cd ledger && yarn
-RUN cd client && yarn && yarn build
-RUN cd webserver && yarn
+RUN yarn
+#RUN cd api && yarn
+#RUN cd ledger && yarn
+#RUN cd client && yarn && yarn build
+#RUN cd webserver && yarn
 
 ENV NODE_ENV production
 EXPOSE 80
